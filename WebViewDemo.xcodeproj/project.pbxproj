@@ -13,6 +13,8 @@
 		D082F4DC1F01EE2B00A9FC02 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D082F4DA1F01EE2B00A9FC02 /* Main.storyboard */; };
 		D082F4DE1F01EE2B00A9FC02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D082F4DD1F01EE2B00A9FC02 /* Assets.xcassets */; };
 		D082F4E11F01EE2B00A9FC02 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D082F4DF1F01EE2B00A9FC02 /* LaunchScreen.storyboard */; };
+		D082F4EA1F01EF1300A9FC02 /* TWOViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D082F4E91F01EF1300A9FC02 /* TWOViewController.m */; };
+		D082F4ED1F01F57700A9FC02 /* DDProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = D082F4EC1F01F57700A9FC02 /* DDProgressView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,10 @@
 		D082F4DD1F01EE2B00A9FC02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D082F4E01F01EE2B00A9FC02 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D082F4E21F01EE2B00A9FC02 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D082F4E81F01EF1300A9FC02 /* TWOViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TWOViewController.h; sourceTree = "<group>"; };
+		D082F4E91F01EF1300A9FC02 /* TWOViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TWOViewController.m; sourceTree = "<group>"; };
+		D082F4EB1F01F57700A9FC02 /* DDProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDProgressView.h; sourceTree = "<group>"; };
+		D082F4EC1F01F57700A9FC02 /* DDProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDProgressView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +48,8 @@
 		D082F4C51F01EE2B00A9FC02 = {
 			isa = PBXGroup;
 			children = (
+				D082F4EB1F01F57700A9FC02 /* DDProgressView.h */,
+				D082F4EC1F01F57700A9FC02 /* DDProgressView.m */,
 				D082F4D01F01EE2B00A9FC02 /* WebViewDemo */,
 				D082F4CF1F01EE2B00A9FC02 /* Products */,
 			);
@@ -62,6 +70,8 @@
 				D082F4D51F01EE2B00A9FC02 /* AppDelegate.m */,
 				D082F4D71F01EE2B00A9FC02 /* ViewController.h */,
 				D082F4D81F01EE2B00A9FC02 /* ViewController.m */,
+				D082F4E81F01EF1300A9FC02 /* TWOViewController.h */,
+				D082F4E91F01EF1300A9FC02 /* TWOViewController.m */,
 				D082F4DA1F01EE2B00A9FC02 /* Main.storyboard */,
 				D082F4DD1F01EE2B00A9FC02 /* Assets.xcassets */,
 				D082F4DF1F01EE2B00A9FC02 /* LaunchScreen.storyboard */,
@@ -110,6 +120,7 @@
 				TargetAttributes = {
 					D082F4CD1F01EE2B00A9FC02 = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 39CU25G7Z2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -153,6 +164,8 @@
 				D082F4D91F01EE2B00A9FC02 /* ViewController.m in Sources */,
 				D082F4D61F01EE2B00A9FC02 /* AppDelegate.m in Sources */,
 				D082F4D31F01EE2B00A9FC02 /* main.m in Sources */,
+				D082F4EA1F01EF1300A9FC02 /* TWOViewController.m in Sources */,
+				D082F4ED1F01F57700A9FC02 /* DDProgressView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +287,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 39CU25G7Z2;
 				INFOPLIST_FILE = WebViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cbw.WebViewDemo;
@@ -285,6 +299,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 39CU25G7Z2;
 				INFOPLIST_FILE = WebViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.cbw.WebViewDemo;
@@ -311,6 +326,7 @@
 				D082F4E71F01EE2B00A9FC02 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

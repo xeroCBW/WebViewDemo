@@ -1,55 +1,56 @@
 //
-//  ViewController.m
+//  TWOViewController.m
 //  WebViewDemo
 //
 //  Created by chenbowen on 2017/6/27.
 //  Copyright © 2017年 chenbowen. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "TWOViewController.h"
 #import "DDProgressView.h"
 
+@interface TWOViewController ()<UIWebViewDelegate>
 
-@interface ViewController ()<UIWebViewDelegate>
 @property(strong,nonatomic)DDProgressView *progressView;
 
-@property (weak, nonatomic) IBOutlet UIBarButtonItem *refresh;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
 @end
 
-@implementation ViewController
+@implementation TWOViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
- 
     
-    self.navigationItem.title = @"api/cookies/read";
-
+    
+    self.navigationItem.title = @"api/cookies/write";
+    
+    
     self.webView.delegate = self;
-
-}
+    //    self.webView.scalesPageToFit = YES;
+    
+    }
 
 -(void)viewDidAppear:(BOOL)animated{
     
     [super viewDidAppear:animated];
     
-    NSString *url = @"https://gatewaytest.qianduan.com/api/cookies/read";
+    NSString *url = @"https://gatewaytest.qianduan.com/api/cookies/write";
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:url]];
     request.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
     [self.webView loadRequest:request];
 }
-
-- (IBAction)reload:(UIBarButtonItem *)sender {
+- (IBAction)refreshAction:(id)sender {
     
-    [self.webView reload];
+      [self.webView reload];
 }
 
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
     
-     [self.progressView startColorful];
+    [self.progressView startColorful];
     
     return  YES;
 }
@@ -82,15 +83,16 @@
 -(DDProgressView *)progressView{
     
     if (_progressView == nil) {
-
-            _progressView = [[DDProgressView alloc] initWithFrame:(CGRect){0,64,[UIScreen mainScreen].bounds.size.width,2} backGroundColor:[UIColor blueColor]];
-            
-            UINavigationController *nav = self.navigationController;
-            [nav.view addSubview:_progressView];
-    
+        
+        _progressView = [[DDProgressView alloc] initWithFrame:(CGRect){0,64,[UIScreen mainScreen].bounds.size.width,2} backGroundColor:[UIColor blueColor]];
+        
+        UINavigationController *nav = self.navigationController;
+        [nav.view addSubview:_progressView];
+        
     }
     return _progressView;
 }
+
 
 
 @end
